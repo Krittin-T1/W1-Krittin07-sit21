@@ -35,7 +35,7 @@ class MyHomePage extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(top: 20, bottom: 20),
               width: double.infinity,
-              decoration: BoxDecoration(color: Colors.red[900]),
+              decoration: BoxDecoration(color: Colors.orange[500]),
               child: Column(
                 children: [
                   Text(
@@ -55,7 +55,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                     child: ClipOval(
                       child: Image.network(
-                        'https://i.pinimg.com/236x/e1/fc/9a/e1fc9ac1229533ee2496c62152cc1610.jpg',
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwLUlcj16ovZCGccVnkaxpOqCMpfF9EKvk5pMDGoDBFy20WF-vuzg0cDVjN0bg8AJj2Ek&usqp=CAU',
                         width: 150,
                         height: 150,
                         fit: BoxFit.cover,
@@ -177,6 +177,146 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Second Page")));
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(10),
+              width: double.infinity,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        child: ClipOval(
+                          child: Image.network(
+                            "https://i.pinimg.com/736x/bd/c2/2c/bdc22c2c4d838f67a8fd547e50a48437.jpg",
+                            width: 80,
+                            height: 80,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Column(children: [
+                        Text("5M", style: TextStyle(color: Colors.white)),
+                        Text("กำลังติดตาม", style: TextStyle(color: Colors
+                            .white)),
+                      ]),
+                      SizedBox(width: 10),
+                      Container(width: 1.5,height: 40,color:  Colors.grey.shade50),
+                      SizedBox(width: 20),
+                      Column(children: [
+                        Text("1", style: TextStyle(color: Colors.white)),
+                        Text("ผู้ติดตาม", style: TextStyle(color: Colors
+                            .white)),
+                      ]),
+                      SizedBox(width: 10),
+                      Container(width: 1.5,height: 40,color:  Colors.grey.shade50),
+                      SizedBox(width: 20),
+                      Column(children: [
+                        Text("1999999", style: TextStyle(color: Colors.white)),
+                        Text("ถูกใจและบันทึก", style: TextStyle(color: Colors
+                            .white)),
+                      ]),
+                    ],
+                  ),
+                  SizedBox(width: 25, height: 25),
+                  Container(
+                    width: double.infinity,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Krittin",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Icon(Icons.verified, color: Colors.blue),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 1),
+            Container(
+              width: double.infinity,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(width: 5),
+                  Icon(Icons.tiktok, color: Colors.grey, size: 20),
+                  Text(
+                    "Krittin",
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white, // เปลี่ยนเป็นขาว
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  SizedBox(width: 2),
+                  Icon(Icons.arrow_drop_down, color: Colors.grey),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(width: 10),
+                  ElevatedButton(
+                    onPressed: () => Navigator.pushNamed(context, '/second'),
+                    child: Text("ติดตาม"),
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: Size(300, 30),
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
+                    ),
+                  ),
+                  Container(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 10, width: 10),
+                        Icon(Icons.share, color: Colors.white),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              width: double.infinity,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(width: 10),
+                  Image.network(
+                    "https://preview.redd.it/i-cleaned-the-page-for-fubuki-cuz-shes-so-hot-v0-ek5h6wdmnmpb1.png?auto=webp&s=4845dc5fd1c6d9a4c8b2e3dad9da985376b0167d",
+                    width: 190,
+                    height: 320,
+                  ),
+                  SizedBox(width: 10),
+                  Image.network(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS79uy_gcvXOVqlRNJsng8IhZfQbNvL9O6EeNjnpvhB-NGnmUL7mG7fa99qIC00i2UZCxw&usqp=CAU",
+                    width: 163,
+                    height: 320,
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
+
